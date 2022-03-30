@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Shade&display=swap');
+
+
+/* Universal */
+:root {
+    background-color: #5EE7EB;
+    font-size: 62.5%;
+}
+
+* {
+    font-family: Bungee;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Text */
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: #AD80FF;
+    margin-bottom: 5rem;
+}
+
+.header > h1 {
+    font-family: "Bungee Shade";
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    color: #2C2B38;
+    
+}
+
+.header > h2 {
+    font-family: "Bungee Shade";
+    color: #FF3D67;
+    margin-bottom: 0.25rem;
+}
+
+.body-container > h2 {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 2.8rem;
+    color: #2C2B38;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+}
+
+/* Containers */
+.header {
+    background-color: #462B9E;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.body-container {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.body-container > * {
+    width: 100%;
+}
+
+#answer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #462B9E;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #2C2B38;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(173, 128, 255, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.answer {
+    width: 40rem;
+    margin-bottom: 2rem;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+.incorrect {
+    background-color: red;
+    color: white;
+}

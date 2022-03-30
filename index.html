@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Trivia Tango</title>
+    <link rel="stylesheet" href="styling/styles.css">
+    <script defer src="src/index.js"></script>
+</head>
+<body>
+
+    <div id="main-container">
+
+        <div id="home-div" class="container-div">
+            <div class="header">
+                <h2>Tech Trivia</h2>
+                <h1>Tango</h1>
+            </div>
+            <div class="body-container">
+                <button id="start" class="btn">Start</button>
+                <button id="hall-of-fame-btn" class="btn">Hall of Fame</button>
+            </div>
+        </div>
+
+        <div id="game" class="hidden container-div">
+            <div class="header">
+                <h2>Tech Trivia</h2>
+                <h1>Tango</h1>
+            </div>
+            <div id="qna-container" class="body-container">
+                <h2 id="question-progress">Question 
+                    <span id="q-number"></span>
+                    /10</h3>
+                <h3 id="question"></h3>
+                <div id="answer-container">
+                    <button id="a1" class="answer btn"></button>
+                    <button id="a2" class="answer btn"></button>
+                    <button id="a3" class="answer btn"></button>
+                    <button id="a4" class="answer btn"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-over" class="hidden container-div">
+            <div class="header">
+                <h2>Game</h2>
+                <h1>Over</h1>
+            </div>
+            <div class="body-container">
+                <img src="Design/Angry Robot.png" alt="angry-robot">
+                <button id="give-up" class="btn">Give Up</button>
+                <button id="retry" class="btn">Retry</button>
+            </div>
+        </div>
+
+        <div id="hall-of-fame" class="hidden container-div">
+            <div class="header">
+                <h2>Hall of</h2>
+                <h1>Fame</h1>
+            </div>
+            <div class="body-container">
+                <div id="lb-container">
+                    <ul id="leaderboard">
+    
+                    </ul>
+                </div>
+                <form id="hof-form" action="submit">
+                    <input id="hof-submit" type="text">
+                    <input id="hof-btn" type="submit" value="Submit">
+                </form>
+                <button id="home" class="btn">Home</button>
+                <button id="replay" class="btn">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html> 
