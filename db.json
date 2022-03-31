@@ -1,3 +1,16 @@
 {
-    
+  "posts": [
+    {
+      "name": "Jacob",
+      "id": 1
+    },
+    {
+      "name": "waqas",
+      "id": 2
+    },
+    {
+      "name": "Yeminy",
+      "id": 3
+    }
+  ]
 }
