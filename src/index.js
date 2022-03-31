@@ -99,11 +99,11 @@ function randomizeAns(question, randAnswers) {
         [randAnswers[i], randAnswers[j]] = [randAnswers[j], randAnswers[i]]
     }
 
-    console.log(randAnswers)
+    // console.log(randAnswers)
 }
 
 function clickAns(answers, correct, questions, currentQ) {
-    // console.log(correct);
+    console.log(correct);
     answers.forEach(answer => {
         // console.log(answer)
         answer.addEventListener('click', () => {    
@@ -165,9 +165,33 @@ hofForm.addEventListener('submit', (e) => {
     const winner = document.createElement('li')
     winner.textContent = hofTxt.value
 
+    storeWinner(winner.textContent)
+
     lbList.append(winner)
     hofForm.reset()
 })
+
+function storeWinner(winner) {
+    console.log(winner)
+    const dbURL = 'http://localhost:3000'
+    
+    const congfigObj = {
+    method: 'POST',
+    headers: {
+        "Content-Type": "application/json",
+        Accept: 'application/json'
+    },
+    body: JSON.stringify({
+        name: winner
+    })
+}
+    console.log(congfigObj)
+    fetch(dbURL, congfigObj)
+    .then(resp => resp.json())
+    .then(winner => {
+        console.log(winner)
+    })
+}
 
 homeBtn.addEventListener('click', () => {
     homeDiv.classList.remove('hidden')
@@ -195,3 +219,4 @@ const retryBtn = document.querySelector('#retry')
         gameOverDiv.classList.add('hidden')
         gameDiv.classList.remove('hidden')
     })
+
